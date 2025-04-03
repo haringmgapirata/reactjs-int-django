@@ -56,6 +56,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://haringmgapirata.github.io/final-reactjs-int-django/",
+    "https://reactjs-int-django.onrender.com/",
 ]
 
 
