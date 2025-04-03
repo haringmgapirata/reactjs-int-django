@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-5mm$2vjsoi!5i!epa$j2hg60xqr12vjza4gsj1xvmy9e!8m*yq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "reactjs-int-django.onrender.com",
+]
 
 
 # Application definition
@@ -57,7 +59,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     "https://haringmgapirata.github.io/final-reactjs-int-django/",
-    "reactjs-int-django.onrender.com",
+    "https://reactjs-int-django.onrender.com/",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
