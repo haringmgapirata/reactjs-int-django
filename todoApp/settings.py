@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     "reactjs-int-django.onrender.com",
+    "haringmgapirata.github.io/final-reactjs-int-django",
 ]
 
 
