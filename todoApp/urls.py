@@ -16,10 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from todoListApp.views import todo_list, todo_detail
+from todoListApp.views import todo_list, todo_detail, SecureHelloView
+from rest_framework.authtoken.views import obtain_auth_token
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/todos/', todo_list, name='todo-list'),
     path('api/todos/<int:pk>/', todo_detail, name='todo-detail'),
+    path('api-token-auth/', obtain_auth_token),
+    path('secure-hello/', SecureHelloView.as_view()),
 ]

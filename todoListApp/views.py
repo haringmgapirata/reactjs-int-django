@@ -3,6 +3,8 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Todo
 from .serializers import TodoSerializer
+from rest_framework.views import APIView
+from rest_framework.permissions import IsAuthenticated
 
 @api_view(['GET', 'POST'])
 def todo_list(request):
@@ -39,3 +41,9 @@ def todo_detail(request, pk):
     elif request.method == 'DELETE':
         todo.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+class SecureHelloView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        return Response({"message": f"Hello, {request.user.username}!"})
